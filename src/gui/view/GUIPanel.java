@@ -5,6 +5,9 @@ import javax.swing.JPanel;
 import javax.swing.JButton;
 import java.awt.Color;
 import javax.swing.SpringLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 
 public class GUIPanel extends JPanel
 {
@@ -21,7 +24,7 @@ public class GUIPanel extends JPanel
 		
 		setupPanel();
 		setupLayout();
-		
+		setupListeners();
 	}
 	/**
 	 * Used to add all components to the subclass of panel.
