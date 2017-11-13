@@ -17,9 +17,10 @@ public class GUIPanel extends JPanel
 		this.appController = appController;
 		firstButton = new JButton("Wow a button.");
 		baseLayout = new SpringLayout();
+
 		
 		setupPanel();
-		
+		setupLayout();
 		
 	}
 	/**
@@ -28,6 +29,7 @@ public class GUIPanel extends JPanel
 	 */
 	private void setupPanel()
 	{
+		this.setBackground(Color.RED);
 		this.setLayout(baseLayout);
 		this.add(firstButton);
 		
@@ -37,7 +39,8 @@ public class GUIPanel extends JPanel
 	 */
 	private void setupLayout()
 	{
-		
+		baseLayout.putConstraint(SpringLayout.SOUTH, firstButton, -40, SpringLayout.SOUTH, this);
+		baseLayout.putConstraint(SpringLayout.EAST, firstButton, -25, SpringLayout.EAST, this);
 	}
 	/**
 	 * This helper method is used to link any GUI components to the associated listeners.
