@@ -14,6 +14,7 @@ public class GUIPanel extends JPanel
 	private GUIAppController appController;
 	private JButton firstButton;
 	private SpringLayout baseLayout;
+	
 	public GUIPanel(GUIAppController appController)
 	{
 		super();
@@ -40,7 +41,7 @@ public class GUIPanel extends JPanel
 	/**
 	 * This is used to hold all the layout and arrangement code for SpringLayout.
 	 */
-	private void setupLayout()
+	private void setupLayout()//put contstraints here even if they appear elsewhere. 
 	{
 		baseLayout.putConstraint(SpringLayout.SOUTH, firstButton, -40, SpringLayout.SOUTH, this);
 		baseLayout.putConstraint(SpringLayout.EAST, firstButton, -25, SpringLayout.EAST, this);
@@ -66,6 +67,7 @@ public class GUIPanel extends JPanel
 		int blue = (int)(Math.random()*256);
 		
 		this.setBackground(new Color(red, green, blue));
+		
 	}
 	
 }
